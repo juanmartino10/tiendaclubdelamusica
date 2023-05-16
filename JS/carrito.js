@@ -1,3 +1,4 @@
+// LOCAL STORAGE
 const ProductosEnCarritoLocal = JSON.parse(localStorage.getItem("ProductosEnCarrito"))
 if(ProductosEnCarritoLocal) {
     carrito = ProductosEnCarritoLocal;
@@ -5,6 +6,7 @@ if(ProductosEnCarritoLocal) {
     carrito = []
 }
 
+// CREAMOS EL CARRITO
 const carritoCompleto = () => {
     carritoCompras.innerHTML = " "
     carritoCompras.style.display = "flex"
@@ -15,6 +17,8 @@ const carritoCompleto = () => {
     tituloCarrito.classList.add("tituloCarrito");
     carritoCompras.append(tituloCarrito);
 
+
+    // BOTON PARA CERRAR EL CARRITO
     const botonCarrito = document.createElement("h3");
     botonCarrito.innerText = "❌";
     botonCarrito.classList.add("botonCarrito");
@@ -23,6 +27,7 @@ const carritoCompleto = () => {
         carritoCompras.style.display = "none"
     })
 
+    // CREAMOS ELEMENTOS DENTRO DEL CARRITO
     const carritoContenido = document.createElement("div");
     carritoContenido.classList.add("contenidoCarrito");
     carritoCompras.append(carritoContenido);
@@ -40,6 +45,8 @@ const carritoCompleto = () => {
         `;
         carritoContenido.append(itemCarrito);
 
+
+        // BOTON PARA BORRAR LOS PRODUCTOS DEL CARRITO
         const eliminar = document.createElement("span");
         eliminar.innerText = "❌";
         eliminar.classList.add("borrarProducto");
@@ -49,6 +56,8 @@ const carritoCompleto = () => {
         });
     })
 
+
+// ACUMULADOR DE PRECIOS, TOTAL A PAGAR
     const total = carrito.reduce((acc, e) => acc + e.precio * e.cantidad, 0);
     const totalCompra = document.createElement("div");
     totalCompra.classList.add("totalCompra");
@@ -56,6 +65,7 @@ const carritoCompleto = () => {
     carritoCompras.append(totalCompra);
 };
 
+// ELIMINAR PRODUCTOS DEL CARRITO
 const eliminarProducto = (id) => {
     const index = carrito.findIndex((producto) => producto.id === id);
     if (index !== -1) {
@@ -65,11 +75,15 @@ const eliminarProducto = (id) => {
     }
 };
 
+
+// NUMERO CONTADOR DE PRODUCTOS
 const contadorCarrito = () => {
     cantidadCarrito.style.display = "block";
     cantidadCarrito.innerText = carrito.length;
 }
 
+
+// ALERTA CUANDO SE REALIZA LA COMPRA
 document.addEventListener("DOMContentLoaded", () => {
     const botonFinalizarCompra = document.getElementById("botonFinalizarCompra");
     botonFinalizarCompra.addEventListener("click", () => {
@@ -83,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// REDIRECCION PARA FINALIZAR LA COMPRA
 verCarrito.addEventListener("click", () => {
     carritoCompleto();
     const botonComprar = document.createElement("button");
