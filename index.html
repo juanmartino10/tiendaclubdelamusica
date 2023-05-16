@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bienvenidos al primer buscador de musicos y bandas del Uruguay. Aqui comienza tu camino, hace crecer tu talento con nosotros!">
+    <meta name="keywords" content="musica, bandas, instrumentos, musicos">
+    <link rel="shortcut icon" href="./imgc/logopagina.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <scrip src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <title>El club de la música</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../imgc/logopagina.png" alt="logo club" width="80" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./micuenta.html">Mi cuenta</a>
+                        </li>
+                        <li id="verCarrito" class="estiloCarrito">🛒 <span id="cantidadCarrito" class="cantidadCarrito"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="tituloTienda">
+        <h1>Bienvenido a nuestra Tienda Virtual</h1>
+    </div>
+        <div id="contenedorProductos">
+        </div>
+        <div id="contenedorCarrito" class="estiloContenedorCarrito">
+        </div>
+    </div>
+    
+    </main>
+    <div class="row">
+        <div class="col">
+            <footer>
+                <div>
+                    <ul class="estilofooter">
+                        <li class="copyfooter">2023 El club de la musica SA. Todos los derechos reservados</li>
+                        <li class="linkFooter"><a href="../pages/terminos.html">Terminos y condiciones</a></li>
+                        <li class="linkFooter"><a href="../pages/ayuda.html">Ayuda</a></li>
+                        <li><a href="https://instagram.com/clubdelamusica" target="_blank"><img class="imgfooter"
+                                    src="./imgc/logoig.png" alt="logo ig"></a>
+                            <a href="https://twitter.com/clubdelamusica" target="_blank"><img class="imgfooter"
+                                    src="./imgc/logotw.png" alt="logo tw"></a>
+                            <a href="https://youtube.com/clubdelamusica" target="_blank"><img class="imgfooter"
+                                    src="./imgc/logoyt.png" alt="logo yt"></a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<script src="./JS/productos.js"></script>
+<script src="./JS/carrito.js"></script>
+<script src="./JS/main.js"></script>
+
+</html>
