@@ -3,7 +3,7 @@ const productos = [
     {
         id: "guitarra-01",
             nombre: "Fender Strato",
-                imagen: "../imgc/strato.jpg",
+                imagen: "./imgc/strato.jpg",
                     precio: 900,
                     cantidad: 1,
         },
