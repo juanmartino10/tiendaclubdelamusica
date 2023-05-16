@@ -91,7 +91,7 @@ verCarrito.addEventListener("click", () => {
     carritoCompras.append(botonComprar);
 
     botonComprar.addEventListener("click", () => {
-        window.location.href = "/checkout.html";
+        window.location.href = "../checkout.html";
     });
 });
 
